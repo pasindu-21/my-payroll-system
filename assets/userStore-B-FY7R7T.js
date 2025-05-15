@@ -1,0 +1,1 @@
+import{d as a}from"./pinia-CtdnbAYu.js";import{a as o,d as r,b as u,g as c}from"./firebase-CNXZ8qHp.js";const i=a("user",{state:()=>({userData:null}),actions:{async fetchUserData(){const s=o.currentUser?.uid;if(!s)return;const t=r(u,"users",s),e=await c(t);e.exists()?this.userData=e.data():console.log("No user document found")}}});export{i as u};
