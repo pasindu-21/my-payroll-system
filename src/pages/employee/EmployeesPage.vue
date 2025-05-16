@@ -33,6 +33,14 @@
               <q-td align="right">
                 <q-btn icon="edit" size="sm" flat @click="editEmployee(props.row)" />
                 <q-btn
+                  icon="visibility"
+                  size="sm"
+                  flat
+                  color="primary"
+                  @click="$router.push(`/employee/${props.row.id}`)"
+                />
+
+                <q-btn
                   icon="delete"
                   size="sm"
                   color="negative"
@@ -80,7 +88,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { db } from '../firebase'
+import { db } from '../../firebase'
 import { collection, addDoc, onSnapshot, deleteDoc, updateDoc, doc } from 'firebase/firestore'
 import { Notify } from 'quasar'
 

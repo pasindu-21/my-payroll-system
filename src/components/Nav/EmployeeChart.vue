@@ -33,7 +33,7 @@ const chartOptions = {
 </script>
 <style scoped>
 .chart-wrapper {
-  max-width: 700px; /* 👈 මෙතනින් විශාල කරන්න */
+  max-width: 700px;
   height: 400px;
   margin: 0 auto;
 }
