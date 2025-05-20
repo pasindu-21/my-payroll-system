@@ -5,21 +5,23 @@ import { useUserStore } from 'src/stores/userStore'
 export default async ({ router }) => {
   const store = useUserStore()
 
-  onAuthStateChanged(auth, (user) => {
-    store.setUser(user)
+  onAuthStateChanged(auth, async (user) => {
+    await store.setUser(user)
 
-    // Logged in: redirect to dashboard if coming from login/register
-    if (
-      user &&
-      (router.currentRoute.value.path === '/login' ||
-        router.currentRoute.value.path === '/register')
-    ) {
-      router.push('/dashboard')
-    }
+    const path = router.currentRoute.value.path
+    const isAdmin = store.role === 'admin'
 
-    // Not logged in: restrict dashboard/employees
-    if (!user && ['/dashboard', '/employees'].includes(router.currentRoute.value.path)) {
-      router.push('/login')
+    if (user) {
+      if (['/login', '/register'].includes(path)) {
+        router.push('/dashboard')
+      }
+      if (path === '/salaries' && !isAdmin) {
+        router.push('/dashboard')
+      }
+    } else {
+      if (['/dashboard', '/employees', '/salaries'].includes(path)) {
+        router.push('/login')
+      }
     }
   })
 }

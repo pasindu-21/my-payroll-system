@@ -1,0 +1,21 @@
+[debug] [2025-05-19T05:48:49.422Z] ----------------------------------------------------------------------
+[debug] [2025-05-19T05:48:49.424Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pasin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-05-19T05:48:49.424Z] CLI Version:   14.3.1
+[debug] [2025-05-19T05:48:49.424Z] Platform:      win32
+[debug] [2025-05-19T05:48:49.424Z] Node Version:  v23.10.0
+[debug] [2025-05-19T05:48:49.424Z] Time:          Mon May 19 2025 11:18:49 GMT+0530 (India Standard Time)
+[debug] [2025-05-19T05:48:49.425Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-19T05:48:49.562Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-19T05:48:49.562Z] > authorizing via signed-in user (pasindudulsara21@gmail.com)
+[debug] [2025-05-19T05:48:49.562Z] [iam] checking project payroll-system-12a3f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-19T05:48:49.563Z] Checked if tokens are valid: false, expires at: 1747605057153
+[debug] [2025-05-19T05:48:49.563Z] Checked if tokens are valid: false, expires at: 1747605057153
+[debug] [2025-05-19T05:48:49.563Z] > refreshing access token with scopes: []
+[debug] [2025-05-19T05:48:49.564Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-19T05:48:49.565Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-19T05:48:50.074Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-19T05:48:50.074Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-19T05:48:50.078Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/payroll-system-12a3f:testIamPermissions [none]
+[debug] [2025-05-19T05:48:50.078Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/payroll-system-12a3f:testIamPermissions x-goog-quota-user=projects/payroll-system-12a3f
+[debug] [2025-05-19T05:48:50.078Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/payroll-system-12a3f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
